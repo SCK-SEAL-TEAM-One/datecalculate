@@ -1,5 +1,26 @@
 # Function And Parameter Naming Standard
 
+## Folder
+### Folder Name
+เป็นตัวอักษรตพิมพ์เล็กทั้งหมด
+```````````
+src
+```````````
+
+## File
+### File Name
+เป็นตัวอักษรตพิมพ์เล็กทั้งหมด
+```````````
+datecalculate.go
+```````````
+
+## Package
+### Package Name
+เป็นตัวอักษรตพิมพ์เล็กทั้งหมด
+```````````
+datecalculate
+```````````
+
 ## Test Function
 ### Function Name
 รูปแบบการตั้งชื่อฟังก์ชันเป็นแบบ SNAKE
@@ -66,7 +87,7 @@ ResultDay, ResultMonth
 HOUR, MINUTE
 ```````````````
 
-###Addtion
+### Addtion
 1. หลัง Comma ทุกครั้ง ให้เว้นวรรค 1 space
 2. ชื่อ Struct ให้ตังชื่อขึ้นต้นคำแรกด้วยตัวอักษรพิมพ์เล็กและคำถัดๆไปด้วยตัวอักษรพิมพ์ใหญ่ ในรูปแบบ Camel
 ```````````````
