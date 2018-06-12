@@ -1,14 +1,14 @@
-#Function And Parameter Naming Standard
+# Function And Parameter Naming Standard
 
-##Test Function
-###Function Name
+## Test Function
+### Function Name
 รูปแบบการตั้งชื่อฟังก์ชันเป็นแบบ SNAKE
 ยกตัวอย่างเช่น
 ``````````
 Test_ActionToTest_Input_152_Should_Be_150
 ``````````
 
-###Parameter Name
+### Parameter Name
 1. ถ้าชื่ตัวแปรเป็นคำๆเดียวให้ตั้งชื่อเป็นพิมพ์เล็กทั้งหมด เช่น
 ```````````````
 day, month, year
@@ -25,22 +25,26 @@ days, months
 ```````````````
 ResultDay, ResultMonth
 ```````````````
+5. ถ้าเป็นตัวแปร Constant ให้ตังชื่อเป็นตัวอักษรพิมพ์ใหญ่ทั้งหมด เช่น
+```````````````
+HOUR, MINUTE
+```````````````
 
-###Addtion
+### Addtion
 1. หลัง Comma ทุกครั้ง ให้เว้นวรรค 1 space
 2. ชื่อ Struct ให้ตังชื่อขึ้นต้นคำแรกด้วยตัวอักษรพิมพ์เล็กและคำถัดๆไปด้วยตัวอักษรพิมพ์ใหญ่ ในรูปแบบ Camel
 ```````````````
 durationDate
 ```````````````
 
-##Function
-###Function Name
+## Function
+### Function Name
 ชื่อฟังก์ชันขึ้นต้นด้วยตัวอักษรพิมพ์ใหญ่ ในรูปแบบ Camel เช่น
 ```````````````
 func TransferMinute
 ```````````````
 
-###Parameter Name
+### Parameter Name
 1. ถ้าชื่ตัวแปรเป็นคำๆเดียวให้ตั้งชื่อเป็นพิมพ์เล็กทั้งหมด เช่น
 ```````````````
 day, month, year
@@ -56,6 +60,10 @@ days, months
 4. ชื่อตัวแปรใน struct ให้ตังชื่อขึ้นต้นคำแรกด้วยตัวอักษรพิมพ์ใหญ่ ในรูปแบบ Camel เช่น
 ```````````````
 ResultDay, ResultMonth
+```````````````
+5. ถ้าเป็นตัวแปร Constant ให้ตังชื่อเป็นตัวอักษรพิมพ์ใหญ่ทั้งหมด เช่น
+```````````````
+HOUR, MINUTE
 ```````````````
 
 ###Addtion
