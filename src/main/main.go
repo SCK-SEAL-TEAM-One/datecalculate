@@ -7,7 +7,7 @@ import (
 
 func main() {
 	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/web", fs)
+	http.Handle("/", fs)
 
 	log.Println("Listening...")
 	http.ListenAndServe(":3000", nil)
