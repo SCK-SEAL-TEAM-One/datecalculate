@@ -18,11 +18,10 @@ func FormatDate(day, month, year int) string {
 	return fmt.Sprintf("%s, %s %s %s", convertWeekDay.String(), strconv.Itoa(convertDay), convertMonth.String(), strconv.Itoa(convertYear))
 }
 
-<<<<<<< HEAD
 func DayToHour(days int) string {
 	hour := days * 24
 
-	return fmt.Sprintf("%s hours", strconv.Itoa(hour))
+	return fmt.Sprintf("%s hours", AddComma(hour))
 }
 
 func PercentOfYear(days int) string {
@@ -34,7 +33,7 @@ func PercentOfYear(days int) string {
 func DayToMinute(days int) string {
 	minute := days * 24 * 60
 
-	return fmt.Sprintf("%s minutes", strconv.Itoa(minute))
+	return fmt.Sprintf("%s minutes", AddComma(minute))
 }
 
 func DayToWeek(days int) string {
@@ -42,10 +41,11 @@ func DayToWeek(days int) string {
 	overday := days % 7
 
 	return fmt.Sprintf("%s weeks and %s days", strconv.Itoa(week), strconv.Itoa(overday))
-=======
+}
+
 func DayToSecond(days int) string {
-	seconds := days * 24 * 60 * 60
-	return fmt.Sprintf("%s seconds", AddComma(seconds))
+	second := days * 24 * 60 * 60
+	return fmt.Sprintf("%s seconds", AddComma(second))
 }
 
 func AddComma(number int) string {
@@ -70,7 +70,7 @@ func FormatDay(days int) string {
 		return fmt.Sprintf("%d day", days)
 	}
 	return fmt.Sprintf("%d days", days)
->>>>>>> 956168029d7a0d8fbadd651b0813cbe91be9317e
+
 }
 
 func DurationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endYear int) int {
