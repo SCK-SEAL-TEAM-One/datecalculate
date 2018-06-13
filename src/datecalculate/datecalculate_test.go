@@ -32,6 +32,7 @@ func Test_FormatDate_Input_4_6_2018_Should_Be_Thursday_4_june_2018(t *testing.T)
 
 }
 
+<<<<<<< HEAD
 func Test_DayToHour_Input_152_Should_Be_3648(t *testing.T) {
 	days := 152
 	expected := "3,648 hour"
@@ -77,4 +78,56 @@ func Test_DayToWeek_Input_152_Should_Be_21_Weeks_And_5_Days(t *testing.T) {
 		t.Errorf("Should be %s but got %s", expected, convertDayToWeek)
 	}
 
+=======
+func Test_DayToSecond_Input_152_Should_Be_13_comma_132_comma_800_seconds(t *testing.T) {
+	days := 152
+	expected := "13,132,800 seconds"
+
+	actual := DayToSecond(days)
+
+	if actual != expected {
+		t.Errorf("expected %s but it is %s", expected, actual)
+	}
+}
+
+func Test_AddComma_Input_1000_should_be_1_comma_000(t *testing.T) {
+	number := 1000
+	expected := "1,000"
+
+	actual := AddComma(number)
+
+	if actual != expected {
+		t.Errorf("expected %s but it is %s", expected, actual)
+	}
+}
+func Test_AddComma_Input_1000000_should_be_1_comma_000_comma_000(t *testing.T) {
+	number := 1000000
+	expected := "1,000,000"
+
+	actual := AddComma(number)
+
+	if actual != expected {
+		t.Errorf("expected %s but it is %s", expected, actual)
+	}
+}
+func Test_AddComma_Input_1000000000_should_be_1_comma_000_comma_000_comma_000(t *testing.T) {
+	number := 1000000000
+	expected := "1,000,000,000"
+
+	actual := AddComma(number)
+
+	if actual != expected {
+		t.Errorf("expected %s but it is %s", expected, actual)
+	}
+}
+func Test_FormatDay_Input_152_Should_Be_152_Days(t *testing.T) {
+	days := 152
+	expected := "152 days"
+
+	formatedDay := FormatDay(days)
+
+	if expected != formatedDay {
+		t.Errorf("Should be %s but got %s", expected, formatedDay)
+	}
+>>>>>>> 956168029d7a0d8fbadd651b0813cbe91be9317e
 }
