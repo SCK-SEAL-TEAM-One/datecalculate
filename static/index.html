@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calculate Duration Between Two Dates</title>
+
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/jquery.ui.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.ui.js"></script>
-    <script>
-    $( function() {
-    $( ".datepicker" ).datepicker();
-  } );
-
-    </script>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <h3>
-                Calculate Duration Between Two Dates
-            </h3>
+            <h3>Calculate Duration Between Two Dates</h3>
         </div>
         <div class="row">
             <div class="col-md-4 col-xs-12">
@@ -35,7 +25,7 @@
                 <input type="text" class="datepicker" id="toDate" />
             </div>
             <div class="col-md-4 col-xs-12">
-                    <button  style="margin-top: 10px">
+                    <button id="calculateDate" style="margin-top: 10px">
                         Calculate Duration
                     </button>
             </div>
@@ -43,21 +33,24 @@
         <hr size="30">
         <div class="row" style="margin-top: 10px">
             <div class="col-md-6  col-xs-12">
-                    <label id="from">From</label>
-                    <label id="to">To</label>
-                    <label id="resultDay">resultDay</label>
+                <label id="from"></label>
+                <label id="to"></label>
+                <label id="resultDay"></label>
+                <label id="years"></label>                
             </div>
             <div class="col-md-6  col-xs-12">
-    
-                    <label id="seconds">seconds</label>
-                    <label id="minutes">minutes</label>
-                    <label id="hours">hours</label>
-                    <label id="days">days</label>
-                    <label id="weeks">weeks</label>
-                    <label id="ratioOfYear">ratioOfYear</label>  
-                </div>
-         
+                <label id="seconds"></label>
+                <label id="minutes"></label>
+                <label id="hours"></label>
+                <label id="days"></label>
+                <label id="weeks"></label>
+                <label id="ratioOfYear"></label>  
+            </div>
         </div>
     </div>
 </body>
+<script src="./js/jquery.js"></script>
+<script src="./js/jquery.ui.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/duration.js"></script>
 </html>
