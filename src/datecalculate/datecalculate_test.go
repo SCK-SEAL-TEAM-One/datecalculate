@@ -31,3 +31,13 @@ func Test_FormatDate_Input_4_6_2018_Should_Be_Thursday_4_june_2018(t *testing.T)
 	}
 
 }
+func Test_FormatDay_Input_152_Should_Be_152_Days (t *testing.T){
+	days := 152
+	expected := "152 days"
+
+	formatedDay := FormatDay(days)
+
+	if expected != formatedDay {
+		t.Errorf("Should be %s but got %s", expected, formatedDay)
+	}
+}

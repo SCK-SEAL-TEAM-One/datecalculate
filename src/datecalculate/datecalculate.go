@@ -15,3 +15,10 @@ func FormatDate(day, month, year int) string {
 
 	return fmt.Sprintf("%s, %s %s %s", convertWeekDay.String(), strconv.Itoa(convertDay), convertMonth.String(), strconv.Itoa(convertYear))
 }
+
+func FormatDay(days int) string {
+	if days < 2 {
+		return fmt.Sprintf("%d day", days)
+	}
+	return fmt.Sprintf("%d days", days)
+}
