@@ -32,6 +32,53 @@ func Test_FormatDate_Input_4_6_2018_Should_Be_Thursday_4_june_2018(t *testing.T)
 
 }
 
+<<<<<<< HEAD
+func Test_DayToHour_Input_152_Should_Be_3648(t *testing.T) {
+	days := 152
+	expected := "3,648 hour"
+
+	convertHour := DayToHour(days)
+
+	if expected != convertHour {
+		t.Errorf("Should be %s but got %s", expected, convertHour)
+	}
+
+}
+
+func Test_PercentOfYear_Input_152_Should_Be_41_Dot_64(t *testing.T) {
+	days := 152
+	expected := "41.64% of common year(365 days)"
+
+	daysToPercentOfYear := PercentOfYear(days)
+
+	if expected != daysToPercentOfYear {
+		t.Errorf("Should be %s but got %s", expected, daysToPercentOfYear)
+	}
+}
+
+func Test_DayToMinute_Input_152_Should_Be_218880(t *testing.T) {
+	days := 152
+	expected := "218,880 minutes"
+
+	convertMinute := DayToMinute(days)
+
+	if expected != convertMinute {
+		t.Errorf("Should be %s but got %s", expected, convertMinute)
+	}
+
+}
+
+func Test_DayToWeek_Input_152_Should_Be_21_Weeks_And_5_Days(t *testing.T) {
+	days := 152
+	expected := "21 weeks and 5 days"
+
+	convertDayToWeek := DayToWeek(days)
+
+	if expected != convertDayToWeek {
+		t.Errorf("Should be %s but got %s", expected, convertDayToWeek)
+	}
+
+=======
 func Test_DayToSecond_Input_152_Should_Be_13_comma_132_comma_800_seconds(t *testing.T) {
 	days := 152
 	expected := "13,132,800 seconds"
@@ -82,6 +129,7 @@ func Test_FormatDay_Input_152_Should_Be_152_Days(t *testing.T) {
 	if expected != formatedDay {
 		t.Errorf("Should be %s but got %s", expected, formatedDay)
 	}
+>>>>>>> 956168029d7a0d8fbadd651b0813cbe91be9317e
 }
 
 func Test_DurationBetweenDate_Input_4_1_2018_And_4_6_2018_Should_Be_152(t *testing.T) {
