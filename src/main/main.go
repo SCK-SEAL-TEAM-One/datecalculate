@@ -7,6 +7,7 @@ import (
 
 func main() {
 	fs := http.FileServer(http.Dir("static"))
+
 	http.Handle("/web/", http.StripPrefix("/web/", fs))
 
 	log.Println("Listening...")
