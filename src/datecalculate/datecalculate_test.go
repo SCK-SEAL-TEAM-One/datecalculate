@@ -4,20 +4,32 @@ import (
 	"testing"
 )
 
-func Test_durationBetweenDate_input_4_1_2018_and_4_6_2018_should_be_152(t *testing.T) {
+func Test_FormatDate_Input_4_1_2018_Should_Be_Thursday_4_January_2018(t *testing.T) {
 	startDay := 4
 	startMonth := 1
 	startYear := 2018
+	expected := "Thursday, 4 January 2018"
+
+	convertDate := FormatDate(startDay, startMonth, startYear)
+
+	if expected != convertDate {
+		t.Errorf("Should be %s but got %s", expected, convertDate)
+	}
+
+}
+
+func Test_FormatDate_Input_4_6_2018_Should_Be_Thursday_4_june_2018(t *testing.T) {
 	endDay := 4
 	endMonth := 6
 	endYear := 2018
-	expected := 152
+	expected := "Monday, 4 June 2018"
 
-	days := durationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endYear)
+	convertDate := FormatDate(endDay, endMonth, endYear)
 
-	if expected != days {
-		t.Errorf("Should be %d but got %d", expected, days)
+	if expected != convertDate {
+		t.Errorf("Should be %s but got %s", expected, convertDate)
 	}
+
 }
 
 func Test_DayToSecond_Input_152_Should_Be_13_comma_132_comma_800_seconds(t *testing.T) {
@@ -59,5 +71,15 @@ func Test_AddComma_Input_1000000000_should_be_1_comma_000_comma_000_comma_000(t 
 
 	if actual != expected {
 		t.Errorf("expected %s but it is %s", expected, actual)
+	}
+}
+func Test_FormatDay_Input_152_Should_Be_152_Days(t *testing.T) {
+	days := 152
+	expected := "152 days"
+
+	formatedDay := FormatDay(days)
+
+	if expected != formatedDay {
+		t.Errorf("Should be %s but got %s", expected, formatedDay)
 	}
 }

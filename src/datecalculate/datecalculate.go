@@ -8,16 +8,14 @@ import (
 	"time"
 )
 
-const HOUR = 24
+func FormatDate(day, month, year int) string {
+	fullNameDate := time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
+	convertWeekDay := fullNameDate.Weekday()
+	convertDay := fullNameDate.Day()
+	convertMonth := fullNameDate.Month()
+	convertYear := fullNameDate.Year()
 
-func durationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endYear int) int {
-	startDate := time.Date(startYear, time.Month(startMonth), startDay, 0, 0, 0, 0, time.UTC)
-	endDate := time.Date(endYear, time.Month(endMonth), endDay, 0, 0, 0, 0, time.UTC)
-
-	durationDate := endDate.Sub(startDate)
-	days := (durationDate.Hours() / HOUR) + 1
-
-	return int(days)
+	return fmt.Sprintf("%s, %s %s %s", convertWeekDay.String(), strconv.Itoa(convertDay), convertMonth.String(), strconv.Itoa(convertYear))
 }
 
 func DayToSecond(days int) string {
@@ -41,4 +39,10 @@ func AddComma(number int) string {
 	}
 
 	return stringutil.Reverse(buffer.String())
+}
+func FormatDay(days int) string {
+	if days < 2 {
+		return fmt.Sprintf("%d day", days)
+	}
+	return fmt.Sprintf("%d days", days)
 }
