@@ -10,7 +10,7 @@ function getAPI() {
     var endMonth = $('#endMonth').val()
     var endYear = $('#endYear').val()
     var host = "http://localhost:3000/duration"
-    var param = `?startDay=${startDay}&startMonth=${startMonth}&startYea=${startYear}` +
+    var param = `?startDay=${startDay}&startMonth=${startMonth}&startYear=${startYear}` +
         `&endDay=${endDay}&endMonth=${endMonth}&endYear=${endYear}`
     var url = host + param
     $.getJSON(url, function (responseData) {
