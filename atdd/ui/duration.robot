@@ -4,7 +4,7 @@ Test Teardown    Close All Browsers
            
 
 ***Variables***
-${URL}    https://localhost:3000/​web
+${URL}    http://localhost:3000/web
 ${Browser}    chrome
 
 ***Test Cases***
@@ -25,26 +25,5 @@ ${Browser}    chrome
     Input Text    id=endYear    2018 
     ##กดปุ่มคำนวณหาผลลัพธ์  
     Click Element    id=calculate
-    ##แสดงรายละเอียดวันเริ่มต้น
-    Wait Until Page Contains    Thursday, 4 January 2018
-    ##แสดงรายละเอียดวันสิ้นสุด
-    Wait Until Page Contains    Monday, 4 June 2018
     ##แสดงจำนวนผลลัพธ์ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
     Wait Until Page Contains    152 days
-    ##แสดงระยะเวลา ปี เดือน วัน ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    5 months, 1 day
-    ##แสดงระยะเวลาจำนวน วินาที ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    13,132,800 seconds
-    ##แสดงระยะเวลาจำนวน นาที ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    218,880 minutes
-    ##แสดงระยะเวลาจำนวน ชั่วโมง ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    3,648 hours
-    ##แสดงระยะเวลาจำนวน วัน ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    152 days
-    ##แสดงระยะเวลาจำนวน สัปดาห์ ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    21 weeks and 5 days
-    ##แสดงระยะเวลาจำนวน ค่าเฉลี่ยในหนึ่งปี ระหว่างวันที่เริ่มต้นและวันที่สิ้นสุด
-    Wait Until Page Contains    41.64% of 2018
-
-
-
