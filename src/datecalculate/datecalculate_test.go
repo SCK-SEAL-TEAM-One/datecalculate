@@ -19,6 +19,29 @@ func Test_DurationBetweenDate_Input_4_1_2018_And_4_6_2018_Should_Be_152(t *testi
 
 	}
 }
+func Test_FormatDay_Input_152_Should_Be_152_Days(t *testing.T) {
+	days := 152
+	expected := "152 days"
+
+	actual := FormatDay(days)
+
+	if expected != actual {
+		t.Errorf("Should be %s but got %s", expected, actual)
+	}
+
+}
+
+func Test_FormatDay_Input_1_Should_Be_1_Day(t *testing.T) {
+	days := 1
+	expected := "1 day"
+
+	actual := FormatDay(days)
+
+	if expected != actual {
+		t.Errorf("Should be %s but got %s", expected, actual)
+	}
+
+}
 
 func Test_NewDate_Input_4_1_2018_Should_Be_4_1_2018(t *testing.T) {
 	day := 4

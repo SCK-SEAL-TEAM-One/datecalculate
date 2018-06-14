@@ -113,3 +113,9 @@ newman run filename
 `[Deleted]: ลบไฟล์ออก`
 
 * ให้เขียนรายละเอียดด้วยว่าแก้ไขอะไรและทำที่ตรงไหน
+
+#คำสั่ง Run Test
+## ค่าสั่ง Run Test Robot
+````````````
+robot duration.robot
+```````````
