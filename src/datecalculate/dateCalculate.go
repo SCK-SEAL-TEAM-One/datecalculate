@@ -13,7 +13,7 @@ func DurationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endY
 	startDate := NewDate(startDay, startMonth, startYear)
 	endDate := NewDate(endDay, endMonth, endYear)
 	diff := endDate.Sub(startDate)
-	day := diff.Hours()/HOUR + 1
+	days := diff.Hours()/HOUR + 1
 
-	return int(day)
+	return int(days)
 }
