@@ -14,6 +14,8 @@ type DurationResponse struct {
 	RatioOfYears string `json:"ratioOfYears"`
 }
 
+const HOUR = 24
+
 func NewDate(day, month, year int) time.Time {
 
 	return time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
@@ -31,4 +33,12 @@ func MakeJson(startDate, endDate time.Time) DurationResponse {
 		Weeks:        "21 weeks and 5 days",
 		RatioOfYears: "41.64% of 2018",
 	}
+}
+func DurationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endYear int) int {
+	startDate := NewDate(startDay, startMonth, startYear)
+	endDate := NewDate(endDay, endMonth, endYear)
+	diff := endDate.Sub(startDate)
+	days := diff.Hours()/HOUR + 1
+
+	return int(days)
 }
