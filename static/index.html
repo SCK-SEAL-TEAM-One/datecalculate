@@ -1,11 +1,57 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>A static page</title>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculate Duration Between Two Dates</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 </head>
+
 <body>
-  <h1>Hello from a static page</h1>
+  <div class="container">
+    <h3>Calculate Duration Between Two Dates</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Start Date</span>
+          </div>
+          <input id="startDay" type="text" class="form-control">
+          <span class="input-group-text">/</span>
+          <input id="startMonth" type="text" class="form-control">
+          <span class="input-group-text">/</span>
+          <input id="startYear" type="text" class="form-control">
+        </div>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">End Date</span>
+          </div>
+          <input id="endDay" type="text" class="form-control">
+          <span class="input-group-text">/</span>
+          <input id="endMonth" type="text" class="form-control">
+          <span class="input-group-text">/</span>
+          <input id="endYear" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button id="calculate" class="form-control" name="calculate">Calculate Duration</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      Result :
+      <label id="resultDay"></label>
+    </div>
+  </div>
+
 </body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/duration.js"></script>
+
 </html>
