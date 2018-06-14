@@ -24,10 +24,11 @@ func NewDate(day, month, year int) time.Time {
 }
 
 func MakeJson(startDate, endDate time.Time) DurationResponse {
+	duration := DurationBetweenDate(startDate, endDate)
 	return DurationResponse{
 		From:         "Thursday, 4 January 2018",
 		To:           "Monday, 4 June 2018",
-		Days:         "152 days",
+		Days:         fmt.Sprintf("%d days", duration),
 		Years:        "5 months, 1 day",
 		Seconds:      "13,132,800 seconds",
 		Minutes:      "218,880 minutes",
