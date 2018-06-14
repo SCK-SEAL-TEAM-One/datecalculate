@@ -97,6 +97,12 @@ HOUR, MINUTE
 durationDate
 ```````````````
 
+### เขียนคำสั่ง run Acceptance test 
+```````````````
+newman run filename
+```````````````
+
+
 ### ข้อตกลง commit message ใน github
 `[Created]: สร้างไฟล์ใหม่`
 
