@@ -3,6 +3,8 @@ package api
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
+	"datecalculate"
 )
 
 type DurationResponse struct {
@@ -18,17 +20,16 @@ type DurationResponse struct {
 }
 
 func ApiCalculateDate(w http.ResponseWriter, r *http.Request) {
-	mockResponse := DurationResponse{
-		From:         "Thursday, 4 January 2018",
-		To:           "Monday, 4 June 2018",
-		Days:         "152 days",
-		Years:        "5 months, 1 day",
-		Seconds:      "13,132,800 seconds",
-		Minutes:      "218,880 minutes",
-		Hours:        "3,648 hours",
-		Weeks:        "21 weeks and 5 days",
-		RatioOfYears: "41.64% of 2018",
-	}
+	queryString := r.URL.Query()
+	startDay, _ := strconv.Atoi(queryString.Get("startDay"))
+	startMonth, _ := strconv.Atoi(queryString.Get("startMonth"))
+	startYear, _ := strconv.Atoi(queryString.Get("startYear"))
+	endDay, _ := strconv.Atoi(queryString.Get("endDay"))
+	endMonth, _ := strconv.Atoi(queryString.Get("endMonth"))
+	endYear, _ := strconv.Atoi(queryString.Get("endYear"))
+	startDate := datecalculate.NewDate(startDay, startMonth, startYear)
+	endDate := datecalculate.NewDate(endDay, endMonth, endYear)
+	mockResponse := datecalculate.MakeJson(startDate, endDate)
 	durationResponse, err := json.Marshal(mockResponse)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

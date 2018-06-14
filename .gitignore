@@ -1,2 +1,6 @@
 bin
 pkg
+.DS_Store
+atdd/ui/*.png
+atdd/ui/*.html
+atdd/ui/*.xml
