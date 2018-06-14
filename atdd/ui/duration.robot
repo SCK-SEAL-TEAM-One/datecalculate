@@ -1,6 +1,6 @@
 ***Setting***
 Library    SeleniumLibrary
-Test Teardown     Close All Browser
+Test Teardown     Close All Browsers
 
 ***Variables***
 ${URL}    http://localhost:3000/web
