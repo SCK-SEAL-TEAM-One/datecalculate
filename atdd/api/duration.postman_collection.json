@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "9fe88e00-9393-4332-9aaa-05136c4ac734",
+		"name": "duration.postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "input_start_date_4_1_2018_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "78a9d543-9d83-4d62-8ffa-1b78ce7a5d4a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Result day should be display 152 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"152 days\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startday=4&startmonth=1&startyear=2018&endday=4&endmonth=6&endyear=2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startday",
+							"value": "4"
+						},
+						{
+							"key": "startmonth",
+							"value": "1"
+						},
+						{
+							"key": "startyear",
+							"value": "2018"
+						},
+						{
+							"key": "endday",
+							"value": "4"
+						},
+						{
+							"key": "endmonth",
+							"value": "6"
+						},
+						{
+							"key": "endyear",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "22409da2-f3e0-4df9-8038-1d276d70eaac",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "967d11e2-0ada-4f5d-a4cf-63d99fd1d81c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
