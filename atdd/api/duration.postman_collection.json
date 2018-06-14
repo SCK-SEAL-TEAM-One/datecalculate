@@ -1,0 +1,604 @@
+{
+	"info": {
+		"_postman_id": "35bcfa23-c847-4e9c-abca-39134ce67b92",
+		"name": "duration.postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "input_start_date_4_1_2018_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe152b0d-4bed-4c3e-9327-7eea9cb8be1e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Thursday, 4 January 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Thursday, 4 January 2018\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 152 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"152 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 5 months 1 day\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"5 months 1 day\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 13,132,800 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"13,132,800 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 218,880 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"218,880 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 3,648 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"3,648 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 21 weeks and 5 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"21 weeks and 5 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 41.64% of 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"41.64% of 2018\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=4/1/2018&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "4/1/2018"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_27_12_1994_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c003907c-3b6f-401d-81ce-ee50fbe537bb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Tuesday, 27 December 1994\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Tuesday, 27 December 1994\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 8,561 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"8,561 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 23 years 5 months 9 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"23 years 5 months 9 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 739,670,400 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"739,670,400 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 12,327,840 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"12,327,840 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 205,464 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"205,464 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,223 weeks\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,223 weeks\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,345.48% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,345.48% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=27/12/1994&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "27/12/1994"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_10_3_1995_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7cdcc44-71bb-4ee8-ba6e-47b3866aee6e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Friday, 10 March 1995\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Friday, 10 March 1995\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 8,488 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"8,488 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 23 years 2 months 26 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"23 years 2 months 26 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 733,363,200 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"733,363,200 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 12,222,720 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"12,222,720 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 203,712 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"203,712 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,212 weeks and 4 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,212 weeks and 4 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,325.48% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,325.48% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=10/3/1995&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "10/3/1995"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_2_8_1995_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7f77e379-1e5d-498e-9073-9b9966a1ea14",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Wednesday, 2 August 1995\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Wednesday, 2 August 1995\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 8,343 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"8,343 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 22 years 10 months 3 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"22 years 10 months 3 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 720,835,200 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"720,835,200 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 12,013,920 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"12,013,920 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 200,232 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"200,232 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,191 weeks and 6 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,191 weeks and 6 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,285.75% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,285.75% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=2/8/1995&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "2/8/1995"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_17_4_1996_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea953465-1aa8-4904-bde8-0df645a51329",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Wednesday, 17 April 1996\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Wednesday, 17 April 1996\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 8,084 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"8,084 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 22 years 1 month 19 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"22 years 1 month 19 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 698,457,600 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"698,457,600 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 11,640,960 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"11,640,960 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 194,016 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"194,016 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,154 weeks and 6 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,154 weeks and 6 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,214.79% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,214.79% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=17/4/1996&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "17/4/1996"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_25_3_1995_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a9c1790-7c1f-4a89-a7d1-8fb4b75380cb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Saturday, 25 March 1995\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Saturday, 25 March 1995\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 8,473 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"8,473 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 23 years 2 months 11 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"23 years 2 months 11 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 732,067,200 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"732,067,200 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 12,201,120 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"12,201,120 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 203,352 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"203,352 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,210 weeks and 3 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,210 weeks and 3 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,321.37% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,321.37% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=25/3/1995&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "25/3/1995"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "input_start_date_28_4_1993_end_date_4_6_2018",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8950a93-4441-4e49-9178-1e61922de711",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Weekday name from should be display Wednesday, 28 April 1993\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.from).to.eql(\"Wednesday, 28 April 1993\");",
+							"});",
+							"",
+							"pm.test(\"Weekday name to should be display Monday, 4 June 2018\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.to).to.eql(\"Monday, 4 June 2018\");",
+							"});",
+							"",
+							"pm.test(\"Result day should be display 9,169 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.days).to.eql(\"9,169 days\");",
+							"});",
+							"",
+							"pm.test(\"Result years should be display 25 years 1 month 8 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.years).to.eql(\"25 years 1 month 8 days\");",
+							"});",
+							"",
+							"pm.test(\"Seconds should be display 792,201,600 seconds\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.seconds).to.eql(\"792,201,600 seconds\");",
+							"});",
+							"",
+							"pm.test(\"Minutes should be display 13,203,360 minutes\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.minutes).to.eql(\"13,203,360 minutes\");",
+							"});",
+							"",
+							"pm.test(\"Hours should be display 220,056 hours\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.hours).to.eql(\"220,056 hours\");",
+							"});",
+							"",
+							"pm.test(\"Week and day should be display 1,309 weeks and 6 days\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.weeks).to.eql(\"1,309 weeks and 6 days\");",
+							"});",
+							"",
+							"pm.test(\"Percent should be display 2,512.05% of a common year (365 days)\", function () {",
+							"    var duration = pm.response.json();",
+							"    pm.expect(duration.ratioOfYear).to.eql(\"2,512.05% of a common year (365 days)\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/duration?startdate=28/4/1993&enddate=4/6/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"duration"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "28/4/1993"
+						},
+						{
+							"key": "enddate",
+							"value": "4/6/2018"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
