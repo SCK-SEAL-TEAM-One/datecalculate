@@ -9,11 +9,11 @@ type Duration struct {
 	Days string `json:"days"`
 }
 
-func ApiCalculateDate(w http.ResponseWriter, req *http.Request) {
+func ApiCalculateDate(responseWriter http.ResponseWriter, request *http.Request) {
 	mockDuration := Duration{
 		Days: "152 days",
 	}
 
 	durationResponse, _ := json.Marshal(mockDuration)
-	w.Write(durationResponse)
+	responseWriter.Write(durationResponse)
 }
