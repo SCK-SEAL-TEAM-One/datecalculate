@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180614 15:11:29.296" generator="Robot 3.0.3 (Python 2.7.10 on darwin)">
+<suite source="/Users/thor/Documents/datecalculate/ui.robot" id="s1" name="Ui">
+<test id="s1-t1" name="เข้าเว็บไซต์กรอกข้อมูลวันที่เริ่ม 4/1/2018 วันที่สิ้นสุด 4/6/2018">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20180614 15:11:30.105" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/web'.</msg>
+<status status="PASS" endtime="20180614 15:11:34.313" starttime="20180614 15:11:30.105"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Calculate Duration Between Two Dates</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180614 15:11:35.144" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180614 15:11:35.144" starttime="20180614 15:11:34.331"></status>
+</kw>
+<msg timestamp="20180614 15:11:35.165" level="FAIL">Title should have been 'Calculate Duration Between Two Dates' but was 'localhost'.</msg>
+<status status="FAIL" endtime="20180614 15:11:35.165" starttime="20180614 15:11:34.315"></status>
+</kw>
+<kw type="teardown" name="Close All Browser">
+<msg timestamp="20180614 15:11:35.172" level="FAIL">No keyword with name 'Close All Browser' found. Did you mean:
+    SeleniumLibrary.Close All Browsers
+    SeleniumLibrary.Close Browser</msg>
+<status status="FAIL" endtime="20180614 15:11:35.172" starttime="20180614 15:11:35.172">No keyword with name 'Close All Browser' found. Did you mean:
+    SeleniumLibrary.Close All Browsers
+    SeleniumLibrary.Close Browser</status>
+</kw>
+<status status="FAIL" endtime="20180614 15:11:35.173" critical="yes" starttime="20180614 15:11:30.101">Title should have been 'Calculate Duration Between Two Dates' but was 'localhost'.
+
+Also teardown failed:
+No keyword with name 'Close All Browser' found. Did you mean:
+    SeleniumLibrary.Close All Browsers
+    SeleniumLibrary.Close Browser</status>
+</test>
+<status status="FAIL" endtime="20180614 15:11:35.185" starttime="20180614 15:11:29.298"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Ui" pass="0">Ui</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
