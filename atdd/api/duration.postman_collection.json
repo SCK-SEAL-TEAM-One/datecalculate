@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fe152b0d-4bed-4c3e-9327-7eea9cb8be1e",
+						"id": "bc1a58ad-e242-4b76-99e6-27063a55545c",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Thursday, 4 January 2018\", function () {",
@@ -29,9 +29,9 @@
 							"    pm.expect(duration.days).to.eql(\"152 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 5 months 1 day\", function () {",
+							"pm.test(\"Result years should be display 5 months, 1 day\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"5 months 1 day\");",
+							"    pm.expect(duration.years).to.eql(\"5 months, 1 day\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 13,132,800 seconds\", function () {",
@@ -96,7 +96,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c003907c-3b6f-401d-81ce-ee50fbe537bb",
+						"id": "f90699e9-5d15-4688-a507-df93f79e0d36",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Tuesday, 27 December 1994\", function () {",
@@ -114,9 +114,9 @@
 							"    pm.expect(duration.days).to.eql(\"8,561 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 23 years 5 months 9 days\", function () {",
+							"pm.test(\"Result years should be display 23 years, 5 months, 9 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"23 years 5 months 9 days\");",
+							"    pm.expect(duration.years).to.eql(\"23 years, 5 months, 9 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 739,670,400 seconds\", function () {",
@@ -181,7 +181,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e7cdcc44-71bb-4ee8-ba6e-47b3866aee6e",
+						"id": "933c8f74-c9da-4eba-8454-09b3cb1df648",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Friday, 10 March 1995\", function () {",
@@ -199,9 +199,9 @@
 							"    pm.expect(duration.days).to.eql(\"8,488 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 23 years 2 months 26 days\", function () {",
+							"pm.test(\"Result years should be display 23 years, 2 months, 26 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"23 years 2 months 26 days\");",
+							"    pm.expect(duration.years).to.eql(\"23 years, 2 months, 26 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 733,363,200 seconds\", function () {",
@@ -266,7 +266,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7f77e379-1e5d-498e-9073-9b9966a1ea14",
+						"id": "a67b1e7c-8dc4-4120-adf1-1fa6cf758fe7",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Wednesday, 2 August 1995\", function () {",
@@ -284,9 +284,9 @@
 							"    pm.expect(duration.days).to.eql(\"8,343 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 22 years 10 months 3 days\", function () {",
+							"pm.test(\"Result years should be display 22 years, 10 months, 3 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"22 years 10 months 3 days\");",
+							"    pm.expect(duration.years).to.eql(\"22 years, 10 months, 3 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 720,835,200 seconds\", function () {",
@@ -351,7 +351,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea953465-1aa8-4904-bde8-0df645a51329",
+						"id": "96fdc31f-1230-4178-a6fd-54fc482f5bc3",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Wednesday, 17 April 1996\", function () {",
@@ -369,9 +369,9 @@
 							"    pm.expect(duration.days).to.eql(\"8,084 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 22 years 1 month 19 days\", function () {",
+							"pm.test(\"Result years should be display 22 years, 1 month, 19 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"22 years 1 month 19 days\");",
+							"    pm.expect(duration.years).to.eql(\"22 years, 1 month, 19 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 698,457,600 seconds\", function () {",
@@ -436,7 +436,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5a9c1790-7c1f-4a89-a7d1-8fb4b75380cb",
+						"id": "6fb16412-0a7e-4713-9d2c-c1773c9a7496",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Saturday, 25 March 1995\", function () {",
@@ -454,9 +454,9 @@
 							"    pm.expect(duration.days).to.eql(\"8,473 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 23 years 2 months 11 days\", function () {",
+							"pm.test(\"Result years should be display 23 years, 2 months, 11 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"23 years 2 months 11 days\");",
+							"    pm.expect(duration.years).to.eql(\"23 years, 2 months, 11 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 732,067,200 seconds\", function () {",
@@ -521,7 +521,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d8950a93-4441-4e49-9178-1e61922de711",
+						"id": "e0459cbf-47d0-4708-878e-708620492b81",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Weekday name from should be display Wednesday, 28 April 1993\", function () {",
@@ -539,9 +539,9 @@
 							"    pm.expect(duration.days).to.eql(\"9,169 days\");",
 							"});",
 							"",
-							"pm.test(\"Result years should be display 25 years 1 month 8 days\", function () {",
+							"pm.test(\"Result years should be display 25 years, 1 month, 8 days\", function () {",
 							"    var duration = pm.response.json();",
-							"    pm.expect(duration.years).to.eql(\"25 years 1 month 8 days\");",
+							"    pm.expect(duration.years).to.eql(\"25 years, 1 month, 8 days\");",
 							"});",
 							"",
 							"pm.test(\"Seconds should be display 792,201,600 seconds\", function () {",
