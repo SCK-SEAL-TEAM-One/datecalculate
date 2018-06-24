@@ -27,7 +27,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:3000/duration?startday=4&startmonth=1&startyear=2018&endday=4&endmonth=6&endyear=2018",
+					"raw": "http://localhost:3000/duration?startDay=4&startMonth=1&startYear=2018&endDay=4&endMonth=6&endYear=2018",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -38,27 +38,27 @@
 					],
 					"query": [
 						{
-							"key": "startday",
+							"key": "startDay",
 							"value": "4"
 						},
 						{
-							"key": "startmonth",
+							"key": "startMonth",
 							"value": "1"
 						},
 						{
-							"key": "startyear",
+							"key": "startYear",
 							"value": "2018"
 						},
 						{
-							"key": "endday",
+							"key": "endDay",
 							"value": "4"
 						},
 						{
-							"key": "endmonth",
+							"key": "endMonth",
 							"value": "6"
 						},
 						{
-							"key": "endyear",
+							"key": "endYear",
 							"value": "2018"
 						}
 					]

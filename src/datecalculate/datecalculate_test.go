@@ -6,14 +6,12 @@ import (
 )
 
 func Test_DurationBetweenDate_Input_4_1_2018_And_4_6_2018_Should_Be_152(t *testing.T) {
-	startDay := 4
-	startMonth := 1
-	startYear := 2018
-	endDay := 4
-	endMonth := 6
-	endYear := 2018
+	startDate := time.Date(2018, 1, 4, 0, 0, 0, 0, time.UTC)
+	endDate := time.Date(2018, 6, 4, 0, 0, 0, 0, time.UTC)
 	expected := 152
-	actual := DurationBetweenDate(startDay, startMonth, startYear, endDay, endMonth, endYear)
+
+	actual := DurationBetweenDate(startDate, endDate)
+
 	if expected != actual {
 		t.Errorf("should be %d but it is %d ", expected, actual)
 
